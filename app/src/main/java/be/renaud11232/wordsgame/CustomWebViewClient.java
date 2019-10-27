@@ -25,10 +25,18 @@ public class CustomWebViewClient extends WebViewClient {
     public void onPageFinished(WebView view, String url) {
         if(error) {
             view.setVisibility(View.INVISIBLE);
+            final WebView wv = view;
+            final String u = url;
             new AlertDialog.Builder(view.getContext())
                     .setTitle(R.string.error)
                     .setMessage(R.string.error_loading)
-                    .setPositiveButton(R.string.ok_button, new DialogInterface.OnClickListener() {
+                    .setPositiveButton(R.string.retry, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            wv.loadUrl(u);
+                        }
+                    })
+                    .setNegativeButton(R.string.quit, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             System.exit(0);
