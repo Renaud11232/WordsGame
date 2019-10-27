@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         WebView webView = findViewById(R.id.web_view);
         webView.setWebChromeClient(new CustomChromeClient());
-        webView.setWebViewClient(new CustomWebviewClient());
+        webView.setWebViewClient(new CustomWebViewClient());
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         webView.loadUrl(getString(R.string.url_homepage));
