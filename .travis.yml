@@ -10,18 +10,20 @@ jobs:
     - stage: build
       script:
         - ./gradlew assembleRelease
-#    - stage: deploy
-#    deploy:
+    - stage: deploy
+    deploy:
 #      - provider: releases
 #        skip_cleanup: true
 #        file: app/build/outputs/apk/release/app-release-unsigned.apk
 #        on:
 #          branch: master
 #          tags: true
-#      - provider: releases
-#        skip_cleanup: true
-#        file: app/build/outputs/apk/release/app-release-unsigned.apk
-#        prerelease: true
-#        on:
-#          branch: prerelease
-#          tags: true
+      - provider: releases
+        api_key:
+          secure: G97sOx44FAGCM3Be0GNgW5Nd5DwMypPb+zEM/N7IILW9VMxbfWWUXMW3wJNtn1tOna096DMT+K0HTuMptcZtqPrV5JdHf00+PdsV9cU/ybVTdw0/8aQS8NJ3YUU2xkAmCFJOpZ3aetLmB0RPBPmrkc+WpgH9VBcF13LYah5Y0T+fsY1x8A5mLbdgA8j93mhszah/q95q4KzTDVXnLpwXFIBhRddJKSpXbch7msSejCkamMu1zRGEPZOlt1L+iFjjd4xVmR2FL+EUR2g4WpDrkYkRslnEcV8I3BdhU9PxL1h/BVVZds7xL/Euy6O/g5qgp4ExAD1mTl/1HraQUF+8f6gdTpnXy1cQrGLjYURZobWG0DoCKc7QyBrYCfJ2XC4XtcAKvFFgxdXWH9TT6MArMihkZ0+684jUu6W9CExzWchI1n1t7cRi3avEeuZpoNemwYLbv5zj9lhKCQtOc0CRgUWOQPQ7781mIZOiXtd0WvNXK705SEm3mQz/gURtphvHZssbkZ/Kvn/H3VYptpufnqshzW6uKtu4wAZMOyX0W+jh2wCMD80lQxCtM1/ZhHonBObHbxj5BQjNvTZFUSR06mqhSghzXjjUykiEPbT8yKDaWpDpDD1+N1uEwvUgOpM/DfWwhVWqzXLPFuVXotbvh8Y+tBhkBYF6PFoUbOHBkx8=
+        skip_cleanup: true
+        file: app/build/outputs/apk/release/app-release-unsigned.apk
+        prerelease: true
+        on:
+          branch: prerelease
+          tags: true
