@@ -6,4 +6,5 @@
     <string name="error_loading">Could not load the page. Check your connection settings.</string>
     <string name="retry">Retry</string>
     <string name="quit">Quit</string>
+    <string name="logo">Logo</string>
 </resources>
