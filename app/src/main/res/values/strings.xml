@@ -2,4 +2,6 @@
     <string name="app_name">Use Your Words</string>
     <string name="url_homepage">https://www.wordsgame.lol</string>
     <string name="ok_button">OK</string>
+    <string name="error">Error</string>
+    <string name="error_loading">Could not load the page. Check your connection settings.</string>
 </resources>
