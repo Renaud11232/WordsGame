@@ -10,18 +10,18 @@ jobs:
     - stage: build
       script:
         - ./gradlew assembleRelease
-    - stage: deploy
-    deploy:
-      - provider: releases
-        skip_cleanup: true
-        file: app/build/outputs/apk/release/app-release-unsigned.apk
-        on:
-          branch: master
-          tags: true
-      - provider: releases
-        skip_cleanup: true
-        file: app/build/outputs/apk/release/app-release-unsigned.apk
-        prerelease: true
-        on:
-          branch: prerelease
-          tags: true
+#    - stage: deploy
+#    deploy:
+#      - provider: releases
+#        skip_cleanup: true
+#        file: app/build/outputs/apk/release/app-release-unsigned.apk
+#        on:
+#          branch: master
+#          tags: true
+#      - provider: releases
+#        skip_cleanup: true
+#        file: app/build/outputs/apk/release/app-release-unsigned.apk
+#        prerelease: true
+#        on:
+#          branch: prerelease
+#          tags: true
