@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Use Your Words</string>
+    <string name="url_homepage">https://www.wordsgame.lol</string>
+    <string name="ok_button">OK</string>
+</resources>
