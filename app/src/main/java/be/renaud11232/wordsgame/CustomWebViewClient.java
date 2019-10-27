@@ -9,7 +9,8 @@ public class CustomWebViewClient extends WebViewClient {
 
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        if(Uri.parse(view.getContext().getString(R.string.url_homepage)).getHost().equals(Uri.parse(url).getHost())) {
+        String host = Uri.parse(view.getContext().getString(R.string.url_homepage)).getHost();
+        if(host != null && host.equals(Uri.parse(url).getHost())) {
             return false;
         }
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
