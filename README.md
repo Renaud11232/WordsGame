@@ -5,4 +5,4 @@ The benefit of using this app is that is prevents the screen from going off whil
 
 ## Screenshots
 
-![Screenshot](.github/screenshot.png)
+<img src=".github/screenshot.png"  width="300"/>
